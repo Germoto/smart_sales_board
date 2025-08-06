@@ -8,8 +8,15 @@ import informe_ventas
 import prediccion_ventas_clima
 
 # =========== CONFIGURACIÓN ===========
-with open("config.json") as f:
-    config = json.load(f)
+try:
+    with open("config.json") as f:
+        config = json.load(f)
+except FileNotFoundError:
+    config = {
+        "api_key": os.environ.get("API_KEY", ""),
+        "latitude": float(os.environ.get("LATITUDE", "0.0")),
+        "longitude": float(os.environ.get("LONGITUDE", "0.0"))
+    }
 
 LAT = config["latitude"]
 LON = config["longitude"]
