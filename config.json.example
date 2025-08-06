@@ -1,0 +1,10 @@
+{
+  "latitude": -3.7437,
+  "longitude": -73.2516,
+  "api_key": "TU_API_KEY_DE_OPENWEATHERMAP_AQUI",
+  "comentarios": {
+    "latitude": "Latitud de tu ubicación (ejemplo: Iquitos, Perú)",
+    "longitude": "Longitud de tu ubicación (ejemplo: Iquitos, Perú)", 
+    "api_key": "Consigue tu API key gratis en: https://openweathermap.org/api"
+  }
+}
