@@ -9,7 +9,7 @@ meteostat>=1.6.0
 requests>=2.28.0
 
 # === Exportación de archivos ===
-fpdf>=2.5.0
+fpdf2>=2.5.0
 openpyxl>=3.1.0
 
 # === Procesamiento de datos ===
