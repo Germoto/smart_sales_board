@@ -10,8 +10,15 @@ from meteostat import Point, Daily
 from fpdf import FPDF
 
 # Cargar configuración desde config.json
-with open("config.json") as f:
-    config = json.load(f)
+try:
+    with open("config.json") as f:
+        config = json.load(f)
+except FileNotFoundError:
+    config = {
+        "api_key": os.environ.get("API_KEY", ""),
+        "latitude": float(os.environ.get("LATITUDE", "0.0")),
+        "longitude": float(os.environ.get("LONGITUDE", "0.0"))
+    }
 
 # Coordenadas de Iquitos
 LAT = config["latitude"]
